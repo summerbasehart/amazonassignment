@@ -10,7 +10,7 @@ const db = createConnection({
     database: 'bamazon'
 })
 
-async function getProducts () {
+async function getProducts ({ item_id, product_name, price, stock_quantity }) {
     let response = await new Promise((resolve, reject) => {
         db.query(`SELECT * FROM products`, (e, r) => {
             if (e) {
@@ -34,11 +34,11 @@ const getAction = _ => {
                     choices: r.map(({ item_id }) => ID)
                 },
             ])
-            .then (({ title, choice }) => {
+            .then (({ item_id, choice }) => {
                 if (choice) {
                     db.query('How many would you like to buy?', {stock_quantity}, e => {
                         if(e) throw e
-                        console.log('Purchase successfull')
+                        console.log('Purchase successful!')
                         getAction()
                     })
                 } else {
