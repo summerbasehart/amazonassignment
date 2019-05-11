@@ -12,5 +12,5 @@ stock_quantity INT
 use bamazon;
 
 INSERT INTO products (product_name, price, stock_quantity)
-VALUES ('HP_Poster', 5, 30), ('samsung_phone', 500, 700), ('reuseable_mug',  5, 15), ('tshirt_pack', 10, 25), ('laptop', 600, 1200), ('Large_Pack_Nutigrain', 15, 100), ('
+VALUES ('HP_Poster', 5, 30), ('samsung_phone', 500, 700), ('reuseable_mug',  5, 15), ('tshirt_pack', 10, 25), ('laptop', 600, 1200), ('Large_Pack_Nutigrain', 15, 100), ('Star_Trek_Figurine', 27, 35), ('Star_Wars_Figurine', 35, 40), ('Dog_Toy', 14, 89), ('Cat_Bed', 13, 102)
 
