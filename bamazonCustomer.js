@@ -10,9 +10,9 @@ const db = createConnection({
     database: 'bamazon'
 })
 
-async function getProducts (columns) {
+async function getProducts () {
     let response = await new Promise((resolve, reject) => {
-        db.query(`SELECT ${columns} FROM products`, (e, r) => {
+        db.query(`SELECT * FROM products`, (e, r) => {
             if (e) {
                 reject(e)
             } else {
